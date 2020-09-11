@@ -222,7 +222,7 @@ def run(username, password):
     opts1.add_argument('--start-maximized')
     browser = webdriver.Chrome(executable_path='drivers/chromedriver.exe', options=opts1)
     wait = WebDriverWait(browser, 45)
-    browser.get('https://accounts.spotify.com/nl/login?continue=https:%2F%2Fopen.spotify.com%2Fplaylist%2F0Bw8ZFirniPrl947XsY4RU')
+    browser.get('redirect link here')
     
     # Login with given credentials
     
@@ -280,7 +280,7 @@ def init():
            |_|                      |___/""")
 
     print("\n * Bot started.")
-    selUrl = 'https://accounts.spotify.com/nl/login?continue=https:%2F%2Fopen.spotify.com%2Fplaylist%2F0Bw8ZFirniPrl947XsY4RU'
+    selUrl = 'redirect link here'
     #with open('data/profiles.json', 'r') as f:
     #    credentials = json.load(f)
     #    print(" * Opening browsers...")
