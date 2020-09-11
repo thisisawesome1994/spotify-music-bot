@@ -59,7 +59,7 @@ class Main:
             _exit(0)
 
         print('%s> %sAmount to create (empty for unlimited)%s: ' % (reset(), green(), reset()), end = '')
-        self.amount = '12'
+        self.amount = '50'
         print()
 
         if self.amount == '':
@@ -211,7 +211,7 @@ def run(username, password):
 
     # Open Chrome and head to playlist link
     
-    proxy1 = random.choice(open('proxies.txt').readlines())
+    proxy1 = random.choice(open('bot_proxies.txt').readlines())
     useragent = random.choice(open('useragents.txt').readlines())
     opts1 = Options()
     opts1.add_argument('--user-agent=%s'% useragent)
@@ -221,8 +221,8 @@ def run(username, password):
     #opts1.add_argument('--headless')
     opts1.add_argument('--start-maximized')
     browser = webdriver.Chrome(executable_path='drivers/chromedriver.exe', options=opts1)
-    wait = WebDriverWait(browser, 35)
-    browser.get('redirect link here')
+    wait = WebDriverWait(browser, 45)
+    browser.get('https://accounts.spotify.com/nl/login?continue=https:%2F%2Fopen.spotify.com%2Fplaylist%2F0Bw8ZFirniPrl947XsY4RU')
     
     # Login with given credentials
     
@@ -280,7 +280,7 @@ def init():
            |_|                      |___/""")
 
     print("\n * Bot started.")
-    selUrl = 'redirect link here'
+    selUrl = 'https://accounts.spotify.com/nl/login?continue=https:%2F%2Fopen.spotify.com%2Fplaylist%2F0Bw8ZFirniPrl947XsY4RU'
     #with open('data/profiles.json', 'r') as f:
     #    credentials = json.load(f)
     #    print(" * Opening browsers...")
