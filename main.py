@@ -25,7 +25,7 @@ def run(username, password, _url, _headless):
 
     # Open Chrome and head to playlist link
     
-    #proxy = random.choice(open('proxies.txt').readlines())
+    proxy = random.choice(open('proxies.txt').readlines())
     useragent = random.choice(open('useragents.txt').readlines())
     opts1 = Options()
     opts1.headless = _headless
@@ -44,8 +44,8 @@ def run(username, password, _url, _headless):
     user_form.send_keys(username)
     pass_form = wait.until(selEc.element_to_be_clickable((selBy.XPATH, xpaths["pass_form"])))
     pass_form.send_keys(password)
-    cookie_check = wait.until(selEc.element_to_be_clickable((selBy.XPATH, xpaths["cookie_check"])))
-    cookie_check.click()
+    #cookie_check = wait.until(selEc.element_to_be_clickable((selBy.XPATH, xpaths["cookie_check"])))
+    #cookie_check.click()
     submit_btn = wait.until(selEc.element_to_be_clickable((selBy.XPATH, xpaths["submit_btn"])))
     submit_btn.click()
     
